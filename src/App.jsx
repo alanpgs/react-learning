@@ -1,45 +1,35 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+import { Component } from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: 'Alan Sha Salim',
+      datas: [],
+    }
+  }
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(json => this.setState.datas = json)
+  }
+
+  render() {
+    return (
+     <div>
+        <h1>{this.state.name}</h1>
+         <ul>
+          {
+            setTimeout(function() {
+              this.state.datas.map(data=> (<li key={data.id}>{data.name}</li>) )
+            }, 500)
+          }  
+        </ul> 
+     </div>
+    ) 
+  }
 }
 
 export default App
