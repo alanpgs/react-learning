@@ -20,6 +20,7 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    color: var(--white-color);
     font-family: var(--font-family);
     background-color: var(--bg-color);
 }
@@ -36,6 +37,9 @@ h6 {
 
 
 a {
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-color);
     transition: all 0.2s ease-in-out;
 
     &:focus {
@@ -46,4 +50,14 @@ a {
         outline: none;
         text-decoration: none;
     }
+}
+
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 80%;
+    min-width: 80%;
+    padding: 0 15px;
+    margin: 0 auto;
 }
