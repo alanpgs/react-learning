@@ -9,34 +9,135 @@
 
         .banner_wrapper{
             position: relative;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 0.65fr;
+            grid-gap: 7.5vw;
             align-items: center;
-            text-align: center;
-            justify-content: center;
+            text-align: start;
             height: 100%;
-            width: 100%;
-            flex-direction: column;
 
-            h1{
+            .content_{
                 position: relative;
-                display: block;
-                font-size: var(--lg-text-4);
-                margin: 0;
-                line-height: 1.75;
-                span{
-                    color: var(--primary-color);
+                display: flex;
+                flex-direction: column;
+
+                label{
+                    position: relative;
+                    display: block;
+                    font-size: var(--sm-text-2);
+                    opacity: 0.75;
+                }
+    
+                h1{
+                    position: relative;
+                    display: block;
+                    font-size: var(--lg-text-4);
+                    margin: 0;
+                    line-height: 1.5;
+                    font-weight: 300;
+    
+                    strong{
+                        font-weight: 700;
+                    }
+                    span{
+                        color: var(--primary-color);
+                    }
+                }
+    
+                p{
+                    position: relative;
+                    display: block;
+                    font-size: var(--md-text-2);
+                    font-weight: 400;
+                    margin-top: 0.75em;
+                    line-height: 1.75;
                 }
             }
 
-            p{
+            .image_{
                 position: relative;
                 display: block;
-                font-size: var(--md-text-2);
-                font-weight: 400;
-                margin-top: 1em;
-                width: 60%;
-                line-height: 1.5;
+                width: 85%;
                 margin: 0 auto;
+                height: auto;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 1em;
+                    border: 2px solid var(--border-color);
+                    z-index: 3;
+                }
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 1em;
+                    background-color: var(--bg-color);
+                    border: 2px solid var(--border-color);
+                    transform: translateX(1.75vw) translateY(1.75vw);
+                    z-index: 0;
+                }
+
+                img{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    border-radius: 1em;
+                    margin: 0 auto;
+                    border-radius: 1em;
+                    z-index: 1;
+                }
+
+                .nft_info{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: auto;
+                    padding: 1em;
+                    z-index: 2;
+                    border-radius: 0 0 1em 1em;
+                    text-align: center;
+
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: var(--text-color);
+                        opacity: 0.75;
+                    }
+
+                    h4{
+                        position: relative;
+                        display: block;
+                        margin: 0;
+                        font-weight: 600;
+                        font-size: var(--md-text);
+                        line-height: 1.75;
+                    }
+
+                    label{
+                        position: relative;
+                        display: block;
+                        font-weight: 500;
+                        margin: 0;
+                        line-height: 1.75;
+                        color: var(--primary-color);
+                        font-size: var(--sm-text);
+                    }
+                }
             }
         }
     }

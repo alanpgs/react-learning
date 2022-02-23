@@ -18,4 +18,11 @@
     &:hover {
         box-shadow: 2px 5px 16px var(--primary-color);
     }
+
+    &.secondary{
+        background-color: var(--white-color);
+        &:hover {
+            box-shadow: 2px 5px 16px var(--white-color);
+        }
+    }
 }

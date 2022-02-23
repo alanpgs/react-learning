@@ -1,18 +1,13 @@
-import { useState } from "react";
 import "./button.scss";
 
-function Button(){
+function Button(props){ 
 
-    const [btnname, setBtnname] = useState('Click Me')
-
-
-    const clicked = ()=> {
-        setBtnname('You Clicked')
-    }
+    let mainClass = 'btn_primary';
+    let style = props.style ? props.style : 'default';
 
     return (
-        <button className="btn_primary" onClick={clicked}>
-            <span>{btnname}</span>
+        <button className={`${mainClass} ${style}`}>
+            <span>{props.title}</span>
         </button>
     )
 
