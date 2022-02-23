@@ -1,8 +1,13 @@
+import brandLogo from "../../../../assets/images/logo-icon.svg"
+
 function NavLogo() {
+
+    const logo = brandLogo;
+
     return (
         <div className="nav_logo">
             <a href="#" className="nav_logo_link">
-                <h1>React<span>Alan</span></h1>
+                <img src={logo} alt="UrbanVyali"></img>
             </a>
         </div>
     )

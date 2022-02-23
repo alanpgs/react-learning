@@ -20,13 +20,16 @@ header{
             position: relative;
             display: block;
             width: auto;
-            height: auto;
+            height: 100%;
 
             .nav_logo_link{
                 position: relative;
                 display: block;
                 margin: 0;
                 text-decoration: none;
+                height: 100%;
+                padding: 0.25em 0;
+                width: auto;
 
                 h1{
                     position: relative;
@@ -39,6 +42,13 @@ header{
                     span{
                         color: var(--primary-color);
                     }
+                }
+
+                img{
+                    position: relative;
+                    display: block;
+                    width: auto;
+                    height: 100%;
                 }
             }
         }
