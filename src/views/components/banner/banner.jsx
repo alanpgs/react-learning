@@ -26,6 +26,11 @@ function Banner() {
                         <div className="nft_info">
                             <h4>Anjenaya Collection 2022</h4>
                             <label>@urbanvyali</label>
+                            <ul className="list_">
+                                <li>Nos: <span>44</span></li>
+                                <li>From: <span>2200 URV</span></li>
+                                <li>Likes: <span>22K</span></li>
+                            </ul>
                         </div>
                     </div>
                    

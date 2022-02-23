@@ -137,6 +137,32 @@
                         color: var(--primary-color);
                         font-size: var(--sm-text);
                     }
+
+                    .list_{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0.5em 0 0;
+                        padding: 0;
+
+                        li{
+                            position: relative;
+                            display: block;
+                            padding: 0.5em;
+                            border-radius: 0.5em;
+                            background-color: rgba(0, 0, 0, 0.438);
+                            margin: 0.25em;
+                            font-size: var(--sm-text);
+                            font-weight: 500;
+
+                            span{
+                                position: relative;
+                                display: inline-block;
+                                color: var(--primary-color);
+                            }
+                        }
+                    }
                 }
             }
         }
