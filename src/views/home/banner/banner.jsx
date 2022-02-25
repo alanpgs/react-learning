@@ -1,4 +1,4 @@
-import Button from "../button/button"; 
+import Button from "../../components/button/button";
 import bannerImage from "../../../assets/images/banner_image_3.jpg";
 import "./banner.scss";
 

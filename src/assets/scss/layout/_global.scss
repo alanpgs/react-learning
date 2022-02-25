@@ -61,3 +61,31 @@ a {
     padding: 0 15px;
     margin: 0 auto;
 }
+
+.urv_section{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10vh 0;
+    overflow: hidden;
+}
+
+.urv_title_wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &.end_{
+        justify-content: flex-end;
+    }
+
+    &.center_{
+        justify-content: center;
+    }
+
+    &.between_{
+        justify-content: space-between;
+    }
+}

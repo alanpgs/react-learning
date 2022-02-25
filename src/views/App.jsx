@@ -1,6 +1,6 @@
 import Header from './components/header/header';
 import BgLine from './components/bgline/BgLine';
-import Banner from './components/banner/banner';
+import IndexHome from './home';
 import './App.scss';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <BgLine />
       <Header />
-      <Banner />
+      <IndexHome />
     </div>
   ) ;
 }
